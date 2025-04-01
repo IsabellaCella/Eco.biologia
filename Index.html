@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco.Biologia - Ecologia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eco.Biologia</h1>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#ciclos">Ciclos Ecológicos</a></li>
+                <li><a href="#diversidade">Diversidade Biológica</a></li>
+                <li><a href="#interacao">Interações Ecológicas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introducao">
+        <h2>O que é Ecologia?</h2>
+        <p>A ecologia é a ciência que estuda as interações entre os seres vivos e o ambiente. Ela analisa como as diferentes espécies interagem com seu meio ambiente e entre si, além de estudar os impactos dessas interações no ecossistema.</p>
+    </section>
+
+    <section id="ciclos">
+        <h2>Ciclos Ecológicos</h2>
+        <p>Os ciclos ecológicos são processos naturais que garantem a reciclagem de materiais essenciais para a vida. Exemplos incluem o ciclo da água, o ciclo do carbono e o ciclo do nitrogênio.</p>
+        <button onclick="mostrarCiclo('agua')">Ciclo da Água</button>
+        <button onclick="mostrarCiclo('carbono')">Ciclo do Carbono</button>
+        <button onclick="mostrarCiclo('nitrogenio')">Ciclo do Nitrogênio</button>
+
+        <div id="ciclo-info">
+            <p id="info-ciclo">Escolha um ciclo ecológico para aprender mais.</p>
+        </div>
+    </section>
+
+    <section id="diversidade">
+        <h2>Diversidade Biológica</h2>
+        <p>A diversidade biológica é a variedade de organismos vivos em nosso planeta, incluindo plantas, animais, fungos e microorganismos. Manter essa diversidade é fundamental para o equilíbrio dos ecossistemas.</p>
+    </section>
+
+    <section id="interacao">
+        <h2>Interações Ecológicas</h2>
+        <p>As interações ecológicas podem ser de vários tipos, como a competição, predação, simbiose, e mutualismo. Cada tipo de interação tem um impacto importante nos organismos envolvidos e no ecossistema.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eco.Biologia | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function mostrarCiclo(ciclo) {
+            let infoText = '';
+            if (ciclo === 'agua') {
+                infoText = 'O ciclo da água descreve o movimento da água no ambiente, envolvendo a evaporação, condensação e precipitação.';
+            } else if (ciclo === 'carbono') {
+                infoText = 'O ciclo do carbono envolve a troca de carbono entre a atmosfera, os oceanos, os solos e os organismos vivos.';
+            } else if (ciclo === 'nitrogenio') {
+                infoText = 'O ciclo do nitrogênio descreve como o nitrogênio circula entre os seres vivos e o ambiente, incluindo processos como a fixação e a nitrificação.';
+            }
+            document.getElementById('info-ciclo').textContent = infoText;
+        }
+    </script>
+</body>
+</html>
